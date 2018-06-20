@@ -1,13 +1,22 @@
+# Build Scripts
+
+This is a living build script. Documentation changes along with the build script to ensure an easy experience for all.
+
+[How do I modify this file?](https://www.npmjs.com/package/maid)
+
 ## test
 
-Run task `lint` before this
+Runs both server and client tests
+
+Runs task `lint` before this
 
 ```bash
-# Run client side tests
+echo "Running client tests..."
 cd ./client
 npm test
 
 # Run server side tests
+echo "Running server tests..."
 cd ../server
 echo "TODO: No server testing is being done"
 ```
@@ -28,13 +37,13 @@ echo "TODO: No server linting is being done"
 
 Runs tasks `start:client` `start:server` after this in parallel
 
-```js
-console.log('Starting up the client and server');
+```bash
+echo 'Starting up the client and server'
 ```
 
 ## start:client
 
-Starts up the client app
+Starts up the angular client app
 
 ```bash
 cd ./client
@@ -44,7 +53,7 @@ npm start
 
 ## start:server
 
-Starts up the client app
+Starts up the server API
 
 ```bash
 cd ./server
