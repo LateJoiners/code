@@ -6,7 +6,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "deploy": "echo \"No deployment yet! Nothing deployed\""
+    "start": "maid start",
+    "test": "maid test",
+    "lint": "maid lint",
+    "help": "maid help"
   },
   "author": "",
   "license": "ISC",
