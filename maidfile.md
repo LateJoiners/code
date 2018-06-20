@@ -60,3 +60,16 @@ cd ./server
 echo "No server to start as yet"
 
 ```
+
+## deploy
+
+Deploys application to heroku
+
+```bash
+# Pushing Server to Heroku
+git subtree push --prefix output heroku master
+# Scale up server
+heroku ps:scale web=1
+# Open in browser
+heroku open
+```
