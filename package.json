@@ -1,0 +1,17 @@
+{
+  "name": "late-joiners",
+  "version": "1.0.0",
+  "description": "A sports prediction picker application for the web",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "deploy": "echo \"No deployment yet! Nothing deployed\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "maid": "^0.3.0",
+    "yarn": "^1.7.0"
+  }
+}
