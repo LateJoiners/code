@@ -9,7 +9,8 @@
     "start": "maid start",
     "test": "maid test",
     "lint": "maid lint",
-    "help": "maid help"
+    "help": "maid help",
+    "deploy": "maid deploy"
   },
   "author": "",
   "license": "ISC",

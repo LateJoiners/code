@@ -58,7 +58,6 @@ Starts up the server API
 ```bash
 cd ./server
 echo "No server to start as yet"
-
 ```
 
 ## deploy
