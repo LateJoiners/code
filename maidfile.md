@@ -10,12 +10,28 @@ Runs both server and client tests
 
 Runs task `lint` before this
 
+Runs tasks `test:client` `test:server` after this
+
 ```bash
+echo "Running all tests..."
+
+```
+
+## test:client
+
+Runs all client tests.
+
+```
 echo "Running client tests..."
 cd ./client
 npm test
+```
 
-# Run server side tests
+## test:server
+
+Runs all server tests.
+
+```
 echo "Running server tests..."
 cd ../server
 echo "TODO: No server testing is being done"
@@ -25,12 +41,28 @@ echo "TODO: No server testing is being done"
 
 Verifies that all the client and server code meets the minimum coding standards
 
+Runs tasks `lint:client` `lint:server` after this
+
+```bash
+echo "Running all linters..."
+```
+
+## lint:client
+
+Verifies that all the client and server code meets the minimum coding standards
+
 ```bash
 cd ./client
-npm run lint --fix 
+npm run lint --fix
+```
 
-cd ../server
-echo "TODO: No server linting is being done"
+## lint:server
+
+Verifies that all the client and server code meets the minimum coding standards
+
+```bash
+cd ./server
+echo "No server linting is being done"
 ```
 
 ## start
