@@ -1,4 +1,5 @@
 # Late Joiners Code
+[![CircleCI](https://circleci.com/gh/LateJoiners/code/tree/develop.svg?style=svg)](https://circleci.com/gh/LateJoiners/code/tree/develop)
 
 The code for the late joiners picker application
 
