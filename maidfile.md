@@ -112,7 +112,7 @@ git subtree push --prefix client heroku-client master
 # Scale up server
 heroku ps:scale web=1
 # Open in browser
-heroku open
+heroku open --app lj-client-app
 ```
 
 ## deploy:server
@@ -121,9 +121,9 @@ Deploys express server application to heroku
 
 ```bash
 # Pushing Server to Heroku
-git subtree push --prefix heroku-server heroku master
+git subtree push --prefix server heroku-server master
 # Scale up server
 heroku ps:scale web=1
 # Open in browser
-heroku open
+heroku open --app lj-server
 ```
