@@ -110,7 +110,7 @@ Deploys angular client application to heroku
 # Pushing Server to Heroku
 git subtree push --prefix client heroku-client master
 # Scale up server
-heroku ps:scale web=1
+heroku ps:scale web=1 --app lj-client-app
 # Open in browser
 heroku open --app lj-client-app
 ```
@@ -123,7 +123,23 @@ Deploys express server application to heroku
 # Pushing Server to Heroku
 git subtree push --prefix server heroku-server master
 # Scale up server
-heroku ps:scale web=1
+heroku ps:scale web=1 --app lj-server
 # Open in browser
 heroku open --app lj-server
+```
+
+## login:server
+
+SSH into server
+
+```bash
+heroku run bash --app lj-server
+```
+
+## login:client
+
+SSH into client
+
+```bash
+heroku run bash --app lj-client-app
 ```
