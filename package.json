@@ -10,8 +10,8 @@
     "test": "maid test",
     "lint": "maid lint",
     "help": "maid help",
-    "deploy": "maid deploy",
-    "build:client": "maid build:client"
+    "deploy:client": "maid deploy:client",
+    "deploy:server": "maid deploy:server"
   },
   "author": "",
   "license": "ISC",

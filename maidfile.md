@@ -92,42 +92,6 @@ cd ./server
 echo "No server to start as yet"
 ```
 
-## deploy
-
-Deploys the client and server
-
-Runs tasks `deploy:client` `deploy:server` after this
-
-```bash
-echo "Deploying client and server..."
-```
-
-## deploy:client
-
-Deploys angular client application to heroku
-
-```bash
-# Pushing Server to Heroku
-git subtree push --prefix client heroku-client master
-# Scale up server
-heroku ps:scale web=1 --app lj-client-app
-# Open in browser
-heroku open --app lj-client-app
-```
-
-## deploy:server
-
-Deploys express server application to heroku
-
-```bash
-# Pushing Server to Heroku
-git subtree push --prefix server heroku-server master
-# Scale up server
-heroku ps:scale web=1 --app lj-server
-# Open in browser
-heroku open --app lj-server
-```
-
 ## login:server
 
 SSH into server
@@ -156,3 +120,9 @@ cd ./client
 npm i
 
 ```
+
+## deploy:client
+
+Runs task `test:client` before this
+
+Runs task `build:client` after this
