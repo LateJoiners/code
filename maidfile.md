@@ -126,3 +126,12 @@ npm i
 Runs task `test:client` before this
 
 Runs task `build:client` after this
+
+## deploy:server
+
+Runs task `test:server` before this
+
+```bash
+cd ./server
+npm i
+```
