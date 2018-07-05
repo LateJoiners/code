@@ -143,3 +143,16 @@ SSH into client
 ```bash
 heroku run bash --app lj-client-app
 ```
+
+## build:client
+
+Builds the client app
+
+Post install script will run angular-cli in prod mode
+
+```bash
+
+cd ./client
+npm i
+
+```
