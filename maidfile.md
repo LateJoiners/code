@@ -89,7 +89,7 @@ Starts up the server API
 
 ```bash
 cd ./server
-echo "No server to start as yet"
+npm start
 ```
 
 ## login:server
