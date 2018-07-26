@@ -10,6 +10,10 @@ const userSchema = new Schema(
             type: String,
             required: true
         },
+        username: {
+            type: String,
+            required: true
+        },
         email: {
             type: String,
             required: true
@@ -37,7 +41,7 @@ const userSchema = new Schema(
 );
 
 userSchema.methods.validatePassword = function(candidatePass, next) {
-    comparePasswords(candidatePass, this.password, function(err, isMatch) {
+    comparePasswords(candidatePass, this.password, (err, isMatch) => {
         if (err) return next(err);
         next(null, isMatch);
     });
@@ -47,7 +51,7 @@ userSchema.pre('save', next => {
     const user = this;
 
     // Update audit information
-    let now = new Date();
+    const now = new Date();
     if (!user.createdOnDate) {
         user.createdOnDate = now;
     }
@@ -67,6 +71,6 @@ userSchema.pre('save', next => {
     }
 });
 
-const User = mongoose.model('ModelName', userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = { User };
