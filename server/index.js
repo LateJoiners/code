@@ -1,12 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const config = require('./config');
+const {port, connectionString} = require('./config');
 const app = express();
 const { register } = require('./routes');
 
-const connectionString =
-  process.env.connectionString || config.connectionString;
-const port = process.env.PORT;
 if (!port) {
     console.error('No port found in environment');
     process.exit(1);
@@ -14,6 +11,7 @@ if (!port) {
 
 mongoose.connect(
     connectionString,
+    { useNewUrlParser: true },
     err => {
         if (err) {
             console.error('Unable to connect to mongo', err);

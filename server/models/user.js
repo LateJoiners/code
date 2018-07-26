@@ -40,7 +40,7 @@ const userSchema = new Schema(
     }
 );
 
-userSchema.methods.validatePassword = function(candidatePass, next) {
+userSchema.methods.validatePassword = function (candidatePass, next) {
     comparePasswords(candidatePass, this.password, (err, isMatch) => {
         if (err) return next(err);
         next(null, isMatch);

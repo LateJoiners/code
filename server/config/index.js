@@ -1,6 +1,8 @@
-const local = require('config.local.json');
-const dev = require('config.dev.json');
-const prod = require('config.prod.json');
+const {mergeDeepRight} = require('ramda');
+const base = require('./config.base');
+const local = require('./config.local');
+const dev = require('./config.dev');
+const prod = require('./config.prod');
 
 let config;
 
@@ -18,4 +20,4 @@ default:
     config = local;
 }
 
-module.exports = config;
+module.exports = mergeDeepRight(base, config);

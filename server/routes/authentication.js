@@ -1,16 +1,16 @@
 const jwt = require('jsonwebtoken');
-const jwtSecret = require('../config/jwt').secret;
+const {jwtSecret} = require('../config');
 const User = require('../models/user');
-const {Router} = require('express');
+const router = require('express').Router();
 
-Router.post('/authenticate', (req, res, next) => {
+router.post('/authenticate', (req, res, next) => {
     const username =
     req.body.emailOrUsername === undefined
         ? req.body.email
         : req.body.emailOrUsername;
 
     if(!req.body.email) {
-        return next('Cannot authenticate without \'email\' or \'emailOrUsername\' field');
+        return next('Cannot authenticate without \'email\' field');
     }
 
     if(!req.body.password) {
@@ -72,4 +72,4 @@ Router.post('/authenticate', (req, res, next) => {
     });
 });
 
-module.exports = { authenticationController: Router };
+module.exports = { authenticationController: router };
