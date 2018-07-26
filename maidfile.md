@@ -89,43 +89,7 @@ Starts up the server API
 
 ```bash
 cd ./server
-echo "No server to start as yet"
-```
-
-## deploy
-
-Deploys the client and server
-
-Runs tasks `deploy:client` `deploy:server` after this
-
-```bash
-echo "Deploying client and server..."
-```
-
-## deploy:client
-
-Deploys angular client application to heroku
-
-```bash
-# Pushing Server to Heroku
-git subtree push --prefix client heroku-client master
-# Scale up server
-heroku ps:scale web=1 --app lj-client-app
-# Open in browser
-heroku open --app lj-client-app
-```
-
-## deploy:server
-
-Deploys express server application to heroku
-
-```bash
-# Pushing Server to Heroku
-git subtree push --prefix server heroku-server master
-# Scale up server
-heroku ps:scale web=1 --app lj-server
-# Open in browser
-heroku open --app lj-server
+npm start
 ```
 
 ## login:server
@@ -142,4 +106,32 @@ SSH into client
 
 ```bash
 heroku run bash --app lj-client-app
+```
+
+## build:client
+
+Builds the client app
+
+Post install script will run angular-cli in prod mode
+
+```bash
+
+cd ./client
+npm i
+
+```
+
+## deploy:client
+
+Runs task `test:client` before this
+
+Runs task `build:client` after this
+
+## deploy:server
+
+Runs task `test:server` before this
+
+```bash
+cd ./server
+npm i
 ```
