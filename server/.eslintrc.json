@@ -8,7 +8,16 @@
         "ecmaVersion": 2016
     },
     "rules": {
+        "space-before-function-paren":"error",
+        "max-len": [
+            "error",
+            80
+        ],
+        "no-param-reassign": "error",
+        "prefer-arrow-callback":"error",
         "no-console":"off",
+        "no-unused-vars":"error",
+        "prefer-const":"error",
         "indent": [
             "error",
             4
