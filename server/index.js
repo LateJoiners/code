@@ -1,5 +1,11 @@
 const express = require('express')
-const app = express()
+const mongoose = require('mongoose');
+const app = express();
+
+const connectionString = process.env.connectionString || 'mongodb://localhost/late-joiners';
+
+mongoose.connect(connectionString);
+
  
 app.get('/', function (req, res) {
   res.send('Hello World')
