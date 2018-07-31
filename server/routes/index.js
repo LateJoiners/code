@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const cors = require('express-cors');
 
 const {authenticationController} = require('./authentication');
 const { sanityController } = require('./sanity');
@@ -20,6 +21,12 @@ const errorHandler = (err, req, res) => {
 };
 
 const register = app => {
+    app.use(cors({
+        allowedOrigins: [
+            'github.com', 'google.com'
+        ]
+    }));
+
     app.use(bodyParser.json());
 
     app.use('/api/authentication', authenticationController);
