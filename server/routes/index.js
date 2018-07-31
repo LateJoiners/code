@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const cors = require('express-cors');
+const {allowedOrigins} = require('../config');
 
 const {authenticationController} = require('./authentication');
 const { sanityController } = require('./sanity');
@@ -22,9 +23,7 @@ const errorHandler = (err, req, res) => {
 
 const register = app => {
     app.use(cors({
-        allowedOrigins: [
-            'github.com', 'google.com'
-        ]
+        allowedOrigins: allowedOrigins
     }));
 
     app.use(bodyParser.json());
