@@ -80,7 +80,6 @@ Starts up the angular client app
 ```bash
 cd ./client
 npm start
-
 ```
 
 ## start:server
@@ -89,6 +88,7 @@ Starts up the server API
 
 ```bash
 cd ./server
+npm i
 npm start
 ```
 
