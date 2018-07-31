@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 
 const {authenticationController} = require('./authentication');
+const { sanityController } = require('./sanity');
 
 const notFoundHandler = (req, res, next) => {
     const err = new Error('Not Found');
@@ -22,6 +23,7 @@ const register = app => {
     app.use(bodyParser.json());
 
     app.use('/api/authentication', authenticationController);
+    app.use('/api/sanity', sanityController);
 
     app.use(express.static(__dirname + '../../assets'));
 

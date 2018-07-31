@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
 const { hashPassword, comparePasswords } = require('../core/hasher');
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
 const userSchema = new Schema(
     {
-        author: ObjectId,
         displayName: {
             type: String,
             required: true
@@ -24,7 +22,8 @@ const userSchema = new Schema(
         },
         permissions: {
             type: [String],
-            required: true
+            required: true,
+            default: []
         },
         updatedOn: {
             type: Date,
@@ -47,17 +46,26 @@ userSchema.methods.validatePassword = function (candidatePass, next) {
     });
 };
 
-userSchema.pre('save', next => {
+userSchema.pre('validate', function (next) {
     const user = this;
+    if (!user.username) {
+        user.username = user.email;
+    }
 
     // Update audit information
     const now = new Date();
-    if (!user.createdOnDate) {
-        user.createdOnDate = now;
+    if (!user.createdOn) {
+        user.createdOn = now;
     }
-    user.lastModifiedOnDate = now;
+    user.updatedOn = now;
 
-    // Make sure not to save passwords in plain-text
+    next(null);
+});
+
+userSchema.pre('save', function (next) {
+    const user = this;
+
+    // Make sure not to save passwords in plain-text!
     if (user.isModified('password')) {
         hashPassword(user.password, (err, hash) => {
             if (err) {

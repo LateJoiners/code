@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config');
 
 const authenticateToken = (req, res, next) => {
-    var token =
+    const token =
     req.body.token || req.query.token || req.headers['x-access-token'];
 
     if (token) {
@@ -49,10 +49,10 @@ const checkPermissions = permissions => (req, res, next) => {
 };
 
 const generateEmailToken = (req, res, next) => {
-    var user = req.body.user;
+    const user = req.body.user;
 
     if (user) {
-        var userData = {
+        const userData = {
             _id: user._id,
             username: user.username,
             displayName: user.displayName,
