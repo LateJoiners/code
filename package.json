@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "maid start",
-    "start:prod": "maid start:server",
+    "start:server": "maid start:server",
     "test": "maid test",
     "lint": "maid lint",
     "help": "maid help",
