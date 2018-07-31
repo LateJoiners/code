@@ -6,6 +6,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "prestart": "npm i",
     "start": "maid start",
     "start:server": "maid start:server",
     "test": "maid test",
