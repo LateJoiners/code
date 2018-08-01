@@ -7,15 +7,13 @@ import { SanityService } from './sanity.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'client';
-  apiCallResponse: string;
   constructor(private sanityService: SanityService) {}
 
   ngOnInit() {
     this.sanityService.canMakeCallToApi().then(msg => {
-      this.apiCallResponse = msg;
+      console.log('Call to API Succeeded:', msg);
     }).catch(error => {
-      this.apiCallResponse = error;
+      console.log('Call to API Failed:', error);
     });
   }
 }
