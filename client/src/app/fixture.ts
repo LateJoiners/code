@@ -6,6 +6,7 @@ export class Fixture {
   home: Team;
   away: Team;
   result: Array<number>;
+  date: string;
 
   constructor(home: Team, away: Team, result: Array<number>) {
     this.home = home;
