@@ -5,49 +5,49 @@ export const Man_Utd: Team = {
   name_long: 'Manchester United',
   name_short: 'Man Utd',
   venue: 'Old Trafford'
-}
+};
 
 export const Leicester: Team = {
   id: 2,
   name_long: 'Leicester City',
   name_short: 'LCY',
   venue: 'unknown'
-}
+};
 
 export const AFC: Team = {
   id: 3,
   name_long: 'AFC Bournemouth',
   name_short: 'AFC',
   venue: 'unknown'
-}
+};
 
 export const Arsenal: Team = {
   id: 4,
   name_long: 'Arsenal',
   name_short: 'Arsenal',
   venue: 'unknown'
-}
+};
 
 export const Fulham: Team = {
   id: 5,
   name_long: 'Fulham',
   name_short: 'Fulham',
   venue: 'unknown'
-}
+};
 
 export const Crystal_Palace: Team = {
   id: 6,
   name_long: 'Crystal Palace',
   name_short: 'CRY',
   venue: 'unknown'
-}
+};
 
 export const Huddersfield: Team = {
   id: 7,
   name_long: 'Huddersfield Town',
   name_short: 'Huddersfield',
   venue: 'unknown'
-}
+};
 
 export const Chelsea: Team = {
   id: 8,
@@ -61,14 +61,14 @@ export const Newcastle: Team = {
   name_long: 'Newcastle United',
   name_short: 'Newcastle Utd',
   venue: 'unknown'
-}
+};
 
 export const Tottenham: Team = {
   id: 10,
   name_long: 'Tottenham Hotspur',
   name_short: 'Spurs',
   venue: 'unknown'
-}
+};
 
 export const Watford: Team = {
   id: 11,
@@ -103,7 +103,7 @@ export const Cardiff: Team = {
   name_long: 'Cardiff City',
   name_short: 'Cardiff',
   venue: 'unknown'
-}
+};
 
 export const Man_City: Team = {
   id: 16,
@@ -131,11 +131,11 @@ export const Southampton: Team = {
   name_long: 'Southampton',
   name_short: 'Southampton',
   venue: 'unknown'
-}
+};
 
 export const Burnley: Team = {
   id: 20,
   name_long: 'Burnley',
   name_short: 'Burnley',
   venue: 'unknown'
-}
+};
