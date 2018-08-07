@@ -54,7 +54,7 @@ export const Chelsea: Team = {
   name_long: 'Chelsea',
   name_short: 'Chelsea',
   venue: 'unknown'
-}
+};
 
 export const Newcastle: Team = {
   id: 9,
@@ -75,28 +75,28 @@ export const Watford: Team = {
   name_long: 'Watford',
   name_short: 'Watford',
   venue: 'unknown'
-}
+};
 
 export const Brighton: Team = {
   id: 12,
   name_long: 'Brighton & Hove Albion',
   name_short: 'Brighton',
   venue: 'unknown'
-}
+};
 
 export const Wolverhampton: Team = {
   id: 13,
   name_long: 'Wolverhampton Wanderers',
   name_short: 'Wanderers',
   venue: 'unknown'
-}
+};
 
 export const Everton: Team = {
   id: 14,
   name_long: 'Everton',
   name_short: 'Everton',
   venue: 'unknown'
-}
+};
 
 export const Cardiff: Team = {
   id: 15,
@@ -110,21 +110,21 @@ export const Man_City: Team = {
   name_long: 'Manchester City',
   name_short: 'Man City',
   venue: 'unknown'
-}
+};
 
 export const Liverpool: Team = {
   id: 17,
   name_long: 'Liverpool',
   name_short: 'Liverpool',
   venue: 'unknown'
-}
+};
 
 export const West_Ham: Team = {
   id: 18,
   name_long: 'West Ham United',
   name_short: 'West Ham',
   venue: 'unknown'
-}
+};
 
 export const Southampton: Team = {
   id: 19,
