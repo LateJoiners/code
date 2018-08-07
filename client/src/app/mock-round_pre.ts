@@ -2,7 +2,7 @@
 import { Fixture } from './fixture';
 import { Team } from './team';
 
-import  * as team from './temp_data_teams';
+import * as team from './temp_data_teams';
 
 export let ROUND: Fixture[] = [];
 
