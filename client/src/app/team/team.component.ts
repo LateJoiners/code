@@ -1,3 +1,5 @@
+// ideally to display the data related to a specific team
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
