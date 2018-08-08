@@ -1,7 +1,6 @@
 // mock data for a simulate "upcoming" round of fixtures
 
 export const ROUND = [
-
   {
     "fixtures": [
       {
