@@ -2,7 +2,7 @@
 
 export const TEAMS = [
   {
-    "teams": [
+    'teams': [
       {
         'id': 1,
         'name_long': 'Manchester United',

@@ -2,7 +2,7 @@
 
 export const ROUND = [
   {
-    "fixtures": [
+    'fixtures': [
       {
         'id': '0001',
         'home': 'Manchester United',

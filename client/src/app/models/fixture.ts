@@ -14,15 +14,13 @@ export class Fixture {
               home: Team,
               away: Team,
               result: [number, number],
-              date: string)
-  {
+              date: string) {
     this.home = home;
     this.away = away;
     this.result = result;
     this.date = date;
 
   // generate a random hash ID for the fixture based on date and teams playing
-
   }
 
   getVenue(): string {
