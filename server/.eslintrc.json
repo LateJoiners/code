@@ -1,0 +1,38 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2016
+    },
+    "rules": {
+        "space-before-function-paren":"error",
+        "max-len": [
+            "error",
+            100
+        ],
+        "no-param-reassign": "error",
+        "prefer-arrow-callback":"error",
+        "no-console":"off",
+        "no-unused-vars":"error",
+        "prefer-const":"error",
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}

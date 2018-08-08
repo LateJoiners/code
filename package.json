@@ -6,11 +6,14 @@
     "doc": "docs"
   },
   "scripts": {
+    "prestart": "npm i",
     "start": "maid start",
+    "start:server": "maid start:server",
     "test": "maid test",
     "lint": "maid lint",
     "help": "maid help",
-    "deploy": "maid deploy"
+    "deploy:client": "maid deploy:client",
+    "deploy:server": "maid deploy:server"
   },
   "author": "",
   "license": "ISC",

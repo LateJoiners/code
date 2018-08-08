@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SanityService } from './sanity.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tip Plus +';
+
+export class AppComponent implements OnInit {
+  constructor(private sanityService: SanityService) {}
+
+  ngOnInit() {
+    this.sanityService.canMakeCallToApi().then(msg => {
+      console.log('Call to API Succeeded:', msg);
+    }).catch(error => {
+      console.log('Call to API Failed:', error);
+    });
+  }
 }

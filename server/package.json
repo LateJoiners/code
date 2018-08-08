@@ -7,12 +7,24 @@
     "node": "9.11.1"
   },
   "scripts": {
+    "start:watch": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --fix",
+    "test": "npm run lint"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-cors": "0.0.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.5",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "nodemon": "^1.18.3"
   }
 }
