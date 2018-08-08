@@ -1,4 +1,4 @@
-import { Team } from './team';
+import { Team } from './models/team';
 
 export const Man_Utd: Team = {
   id: 1,
