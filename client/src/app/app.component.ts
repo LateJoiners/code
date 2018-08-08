@@ -6,8 +6,6 @@ import { SanityService } from './sanity.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Tip Plus +';
 
 export class AppComponent implements OnInit {
   constructor(private sanityService: SanityService) {}
