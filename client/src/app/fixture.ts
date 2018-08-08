@@ -3,6 +3,7 @@
 import { Team } from './team';
 
 export class Fixture {
+  id: number; // give each unique fixture a ref ID
   home: Team;
   away: Team;
   result: Array<number>;
@@ -12,6 +13,8 @@ export class Fixture {
   //   this.home = home;
   //   this.away = away;
   //   this.result = result;
+  // generate a random hash ID for the fixture based on date and teams playing
+  //
   // }
   //
   // getVenue() {
