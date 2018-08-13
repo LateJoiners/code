@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const { Fixture } = require('./fixture');
 
-
 const roundSchema = new Schema(
     {
         fixtures: {
