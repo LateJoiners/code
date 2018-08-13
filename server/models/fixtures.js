@@ -1,3 +1,5 @@
+// first-pass definition of an individual fixture
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const { Fixture } = require('./fixture');
