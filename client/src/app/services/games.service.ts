@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Round } from '../data/round';
-import { Fixture } from '../models/fixture';
 
 @Injectable({
   providedIn: 'root'

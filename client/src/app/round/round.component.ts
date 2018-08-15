@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from '../services/games.service';
-import { Fixture } from '../models/fixture';
-
-
 
 @Component({
   selector: 'app-round',
@@ -18,7 +15,6 @@ export class RoundComponent implements OnInit {
 
   ngOnInit() {
     this.getRoundData();
-    this.getName();
     // console.log(this.name);
   }
 
@@ -27,13 +23,4 @@ export class RoundComponent implements OnInit {
     this.gamesService.getRound().then(games => this.games = games);
     // console.log(this.games);
   }
-
-  getName(): any {
-    console.log('getName called');
-    this.gamesService.getName().then(name => this.name = name);
-    // console.log(this.name);
-  }
-
-
-
 }
