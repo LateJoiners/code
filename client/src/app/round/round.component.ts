@@ -11,7 +11,6 @@ export class RoundComponent implements OnInit {
   constructor(private gamesService: GamesService) { }
 
   games: any [];
-  name: any;
 
   ngOnInit() {
     this.getRoundData();
