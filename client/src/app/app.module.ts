@@ -8,13 +8,15 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { SanityService } from './sanity.service';
+import { RoundComponent } from './round/round.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RoundComponent
   ],
   imports: [
     BrowserModule,
