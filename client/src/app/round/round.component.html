@@ -3,9 +3,9 @@
 </p>
 <ul class="games">
   <li *ngFor="let game of games">
+    <span> date: {{ game.date | date: 'fullDate' }} </span>
     <span> home: {{ game.home }} </span>
     <span> away: {{ game.away }} </span>
+    <span> score:{{ game.result[0] }} - {{ game.result[1] }}</span>
   </li>
-
-
 </ul>
