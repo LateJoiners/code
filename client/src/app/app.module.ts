@@ -10,6 +10,12 @@ import { RegisterComponent } from './register/register.component';
 import { SanityService } from './sanity.service';
 import { RoundComponent } from './round/round.component';
 
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import loccaleEnAu from '@angular/common/locales/en-AU';
+
+registerLocaleData(loccaleEnAu);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +30,7 @@ import { RoundComponent } from './round/round.component';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [SanityService],
+  providers: [SanityService, {provide: LOCALE_ID, useValue: "en-AU"}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
