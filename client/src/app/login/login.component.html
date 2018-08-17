@@ -1,3 +1,4 @@
+<!-- Luke's original code, kept for reference if necessary
 <form>
   <h2>Login</h2>
 
@@ -26,3 +27,70 @@
   </p>
 
 </form>
+-->
+
+<!-- Code from mockup -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="display-2">
+          <div style="">
+            <span style="color: inherit; font-size: 5.5rem;">TipPlus</span>
+            <span class="badge badge-pill badge-secondary">+</span>
+          </div>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="">Pick anything, anywhere.</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="">
+          <div class="form-group col-md-12">
+            <label>Username</label>
+            <input id="email" type="username" [ngClass]="{ 'form-control' : true, 'border-danger' : loginAttemptFailed }" placeholder="Your email" required>
+          </div>
+          <div class="form-group col-md-12">
+            <label>Password</label>
+            <input id="password" type="password" [ngClass]="{ 'form-control' : true, 'border-danger' : loginAttemptFailed }" placeholder="Password" required>
+          </div>
+          <div class="form-group col-md-12">
+            <div class="">
+              <button type="submit" class="btn btn-outline-primary">Login</button>
+            </div>
+            <p>
+              Don't have an account yet? Why not <a routerLink="/register">register?</a>
+            </p>
+            <div *ngIf="loginAttemptFailed" class="">
+              <span class="text-danger">Username or password incorrect. Please try again.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-group btn-group-sm float-right float-md-right">
+          <a href="#" class="btn btn-outline-primary">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
