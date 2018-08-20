@@ -14,4 +14,5 @@ export class SanityService {
       .toPromise()
       .then((response: any) => response.message);
   }
+
 }

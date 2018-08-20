@@ -8,13 +8,23 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { SanityService } from './sanity.service';
+import { RoundComponent } from './round/round.component';
+
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import loccaleEnAu from '@angular/common/locales/en-AU';
+import { SportsComponent } from './sports/sports.component';
+
+registerLocaleData(loccaleEnAu);
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RoundComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +32,7 @@ import { SanityService } from './sanity.service';
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [SanityService],
+  providers: [SanityService, {provide: LOCALE_ID, useValue: 'en-AU'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
