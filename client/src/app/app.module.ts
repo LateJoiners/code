@@ -30,7 +30,7 @@ registerLocaleData(loccaleEnAu);
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [SanityService, {provide: LOCALE_ID, useValue: "en-AU"}],
+  providers: [SanityService, {provide: LOCALE_ID, useValue: 'en-AU'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

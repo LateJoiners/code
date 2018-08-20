@@ -15,4 +15,4 @@ export class SanityService {
       .then((response: any) => response.message);
   }
 
-};
+}
