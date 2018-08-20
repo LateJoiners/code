@@ -1,3 +1,6 @@
+// Component to display a list of FIXTURES from which the USER
+// can make their predications/selections
+
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from '../services/games.service';
 import { Fixture } from '../models/fixture';

@@ -1,3 +1,6 @@
+// Component intended to display a list of available sports
+// the USER can select from in order to joing a tournament
+
 import { Component, OnInit } from '@angular/core';
 import { SportsService } from '../services/sports.service';
 import { Sport } from '../models/sport';
