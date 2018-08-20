@@ -13,6 +13,7 @@ import { RoundComponent } from './round/round.component';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import loccaleEnAu from '@angular/common/locales/en-AU';
+import { SportsComponent } from './sports/sports.component';
 
 registerLocaleData(loccaleEnAu);
 
@@ -22,7 +23,8 @@ registerLocaleData(loccaleEnAu);
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
-    RoundComponent
+    RoundComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,
