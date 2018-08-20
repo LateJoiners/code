@@ -4,11 +4,13 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { RoundComponent } from './round/round.component';
+import { SportsComponent } from './sports/sports.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register',        component: RegisterComponent },
   { path: 'round', component: RoundComponent },
+  { path: 'sports', component: SportsComponent},
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
