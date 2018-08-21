@@ -4,7 +4,17 @@
 
 <ul class="sports">
   <li *ngFor="let sport of sports">
+    <!-- clicking on a sport should open a page that displays available tournaments -->
     <span>{{ sport.label }}</span>
+    <span *ngIf="!!sport.leagues">
+      <ul class="sport.leagues">
+        <li *ngFor="let league of sport.leagues">
+          <span>{{ league.name }} </span>
+        </li>
+      </ul>
+      </span>
+    <!-- tournaments should expand in a rollout beneath the selected sport -->
+    <!-- each tournament should list it's name and the number of players/users -->
   </li>
 </ul>
 
