@@ -92,6 +92,33 @@ npm i
 npm start
 ```
 
+## start
+
+Runs tasks `start:client` `start:server` after this in parallel
+
+```bash
+echo 'Starting up the client and server'
+```
+
+## start:client
+
+Starts up the angular client app
+
+```bash
+cd ./client
+npm start
+```
+
+## start:server
+
+Starts up the server API
+
+```bash
+cd ./server
+npm i
+npm run start:watch
+```
+
 ## login:server
 
 SSH into server

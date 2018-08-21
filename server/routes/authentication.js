@@ -9,11 +9,13 @@ const login = (req, res, next) => {
         ? req.body.email
         : req.body.emailOrUsername;
 
-    if (!req.body.email) {
-        return next('Cannot authenticate without \'email\' field');
+    if (!username) {
+        res.status(400);
+        return next('Cannot authenticate without \'username\' field');
     }
 
     if (!req.body.password) {
+        res.status(400);
         return next('Cannot authenticate without \'password\' field');
     }
 

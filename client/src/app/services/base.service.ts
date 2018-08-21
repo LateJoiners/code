@@ -4,20 +4,21 @@ import { User } from '../models/user';
 import { StorageService } from './storage.service';
 
 const LOGGED_IN_USER_KEY = 'late-joiners-user';
-const AUTH_HEADER = 'x-access-token';
+const AUTH_HEADER = 'Authorization';
 
 export class BaseService {
   private axiosInstance: AxiosInstance;
-  loggedInUserUpdated: any;
+  private loggedInUserUpdated: any;
+  protected user: User;
 
-  private initializeAxiosInstance () {
+  private initializeAxiosInstance = () => {
     this.axiosInstance = axios.create({
       baseURL: environment.apiUrl
     });
 
-    const user: User = this.storageService.get(LOGGED_IN_USER_KEY);
-    if (user) {
-      this.axiosInstance.defaults.headers.common[AUTH_HEADER] = user.token;
+    this.user = this.storageService.get(LOGGED_IN_USER_KEY);
+    if (this.user) {
+      this.axiosInstance.defaults.headers.common[AUTH_HEADER] = this.user.token;
     }
   }
 
@@ -28,22 +29,22 @@ export class BaseService {
     this.initializeAxiosInstance();
   }
 
-  get<T>(url: string): Promise<T> {
+  protected get<T>(url: string): Promise<T> {
     return this.axiosInstance.get(url)
       .then(response => response.data);
   }
 
-  put<T>(url: string, data: any): Promise<T> {
+  protected put<T>(url: string, data: any): Promise<T> {
     return this.axiosInstance.put(url, data)
       .then(response => response.data);
   }
 
-  post<T>(url: string, data: any): Promise<T> {
+  protected post<T>(url: string, data: any): Promise<T> {
     return this.axiosInstance.post(url, data)
       .then(response => response.data);
   }
 
-  delete<T>(url: string): Promise<T> {
+  protected delete<T>(url: string): Promise<T> {
     return this.axiosInstance.delete(url)
       .then(response => response.data);
   }

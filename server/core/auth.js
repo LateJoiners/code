@@ -3,7 +3,7 @@ const config = require('../config');
 
 const authenticateToken = (req, res, next) => {
     const token =
-    req.body.token || req.query.token || req.headers['x-access-token'];
+    req.body.token || req.query.token || req.headers['Authorization'];
 
     if (token) {
         jwt.verify(token, config.jwtSecret, (err, decoded) => {
