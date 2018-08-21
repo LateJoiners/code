@@ -4,6 +4,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GamesService } from '../services/games.service';
 import { Fixture } from '../models/fixture';
+import { Teams } from '../data/mock-team';
+import { Team } from '../models/team';
 
 @Component({
   selector: 'app-round',
@@ -13,18 +15,48 @@ import { Fixture } from '../models/fixture';
 
 export class RoundComponent implements OnInit {
 
-  constructor(private gamesService: GamesService) { }
+  constructor(private gamesService: GamesService) { 
+
+  }
 
   games: Fixture[];
+  teams: Team[];
+  sortedGames: Fixture[];
+
+  
 
   ngOnInit() {
     this.getRoundData();
-    // console.log(this.name);
+    this.teams = Teams;
   }
 
   getRoundData(): void {
     console.log('getRoundData called');
     this.gamesService.getRound().then(games => this.games = games);
-    // console.log(this.games);
+    console.log('from inside getRoundData:',this.games);
   }
+
+  sortRoundData(): void {
+    this.sortedGames = this.games;
+    
+    this.sortedGames.sort((leftSide, rightSide): number => {
+      if (leftSide.date < rightSide.date) return -1;
+      if (leftSide.date > rightSide.date) return 1;
+      return 0;
+    });
+    console.log("Sorted Games: ", this.sortedGames);
+  }
+
+  getVenueName(team: string): string {
+    let team_obj = this.teams.find(i => i.name_long === team);
+    return team_obj.venue;
+  }
+
+  getTeamBadgeID(team: string): string {
+    let team_obj = this.teams.find(i => i.name_long === team);
+    return team_obj.id;
+  }
+
+  // work out the date in order to work out the round of games to show
+
 }

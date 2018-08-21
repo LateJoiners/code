@@ -19,7 +19,6 @@
 }
 
 .badge-tip {
-    /* background-image: url(../images/badges-50-sprite.png); */
     background-image: url(../../assets/images/badges-50-sprite.png);
     background-repeat: no-repeat;
     /*width: 50px;*/
