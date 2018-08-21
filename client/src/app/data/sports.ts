@@ -9,7 +9,7 @@ export const Sports = [
     },
     {
         'id' : '0003',
-        'label': 'Rugby Union'
+        'label': 'Rugby Union',
     },
     {
         'id' : '0004',
