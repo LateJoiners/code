@@ -12,7 +12,7 @@ const notFoundHandler = (req, res, next) => {
     next(err);
 };
 
-const errorHandler = (err, req, res) => {
+const errorHandler = (err, req, res, next) => { // eslint-disable-line no-unused-vars
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
 
@@ -23,7 +23,8 @@ const errorHandler = (err, req, res) => {
 
 const register = app => {
     app.use(cors({
-        allowedOrigins: allowedOrigins
+        allowedOrigins: allowedOrigins,
+        headers: ['Authorization', 'Content-Type']
     }));
 
     app.use(bodyParser.json());
