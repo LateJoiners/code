@@ -15,6 +15,7 @@ export class SportsComponent implements OnInit {
   constructor(private sportsService: SportsService) { }
 
   sports: Sport[];
+  selectedSport: Sport;
 
   ngOnInit() {
     this.getSportsData();
@@ -26,4 +27,11 @@ export class SportsComponent implements OnInit {
     this.sportsService.getSports().then(sports => this.sports = sports);
   }
 
+  onSelect(sport: Sport): void {
+    if (sport.leagues) {
+      this.selectedSport = sport;
+    } else {
+      this.selectedSport = null;
+    }
+  }
 }

@@ -13,10 +13,10 @@ export class SportsService {
 
   constructor() {
     this.this_sports = <Array<Sport>>Sports;
-    var sport_obj:Sport;
-    for (let sport_obj of this.this_sports) {
+    // const sport_obj: Sport;
+    for (const sport_obj of this.this_sports) {
 
-      if (sport_obj.label == 'Football'){
+      if (sport_obj.label === 'Football') {
         sport_obj.leagues = Football_Leagues;
       }
     }

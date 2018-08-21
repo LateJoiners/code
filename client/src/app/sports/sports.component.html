@@ -3,10 +3,11 @@
 </p>
 
 <ul class="sports">
-  <li *ngFor="let sport of sports">
+  <li *ngFor="let sport of sports"
+  (click)="onSelect(sport)">
     <!-- clicking on a sport should open a page that displays available tournaments -->
     <span>{{ sport.label }}</span>
-    <span *ngIf="!!sport.leagues">
+    <span *ngIf="selectedSport">
       <ul class="sport.leagues">
         <li *ngFor="let league of sport.leagues">
           <span>{{ league.name }} </span>
