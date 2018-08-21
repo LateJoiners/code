@@ -2,14 +2,14 @@
   sports works!
 </p>
 
-<ul class="sports">
-  <li *ngFor="let sport of sports"
+<ul class="sports list-group">
+  <li *ngFor="let sport of sports" class="list-group-item"
   (click)="onSelect(sport)">
     <!-- clicking on a sport should open a page that displays available tournaments -->
     <span>{{ sport.label }}</span>
     <span *ngIf="selectedSport">
-      <ul class="sport.leagues">
-        <li *ngFor="let league of sport.leagues">
+      <ul class="sport.leagues list-group">
+        <li *ngFor="let league of sport.leagues" class="list-group-item">
           <span>{{ league.name }} </span>
         </li>
       </ul>
