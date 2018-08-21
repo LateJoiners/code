@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
   round works!
 </p>
 <ul class="games">
@@ -8,4 +8,538 @@
     <span> away: {{ game.away }} </span>
     <span> score:{{ game.result[0] }} - {{ game.result[1] }}</span>
   </li>
-</ul>
+</ul> -->
+
+  <!-- <div class="">
+    <div class="container">
+      <div class="row bg-secondary text-white">
+        <div class="col-md-6">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white"> TipPlus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Tournaments
+                <br> </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 navbar_blue">
+          <ul class="nav nav-pills justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Help
+                <br> </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h1 class="">Tipping</h1>
+        </div>
+        <div class="col-md-6">
+          <h1 class="">English Premier League</h1>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="w-100 py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>This Week's Games</h2>
+          <div class="row">
+            <!-- this is the column (below) for the games to pick from -->
+            <div class="col-md-7">
+              <div class="row border">
+                <div class="col-md-12">
+                  <div>11 August 2018
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="row location">Old Trafford, Manchester</div>
+                        <div class="row ">
+                          <div class="col-md-1"><input type="radio"></div>
+                          <div class="col-md-4 text-right pad_right">Man Utd</div>
+                          <div class="col-md-1 text-center badge-tip t_01"></div>
+                          <div class="col-md-1 text-center badge-tip t_02"></div>
+                          <div class="col-md-4 text-left pad_left">Leicester</div>
+                          <div class="col-md-1 "><input type="radio" class=" right-align"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"></div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"></div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">St. James' Park, Newcastle</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-4 text-right">Newcastle</div>
+                          <div class="col-md-1 text-center badge-tip t_03"></div>
+                          <div class="col-md-1 text-center badge-tip t_04"></div>
+                          <div class="col-md-4 text-left">Spurs</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2 ">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2 ">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row border">
+                <div class="col-md-12">
+                  <div>12 August 2018
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="row location">Vitality Stadium, Bournemouth</div>
+                        <div class="row">
+                          <div class="col-md-1"><input type="radio"></div>
+                          <div class="col-md-4 text-right pad_right">Bournemouth</div>
+                          <div class="col-md-1 text-center badge-tip t_05"></div>
+                          <div class="col-md-1 text-center badge-tip t_06"></div>
+                          <div class="col-md-4 text-left pad_left">Cardiff</div>
+                          <div class="col-md-1 "><input type="radio" class=" right-align"></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-4 text-right pad_right">Fulham</div>
+                          <div class="col-md-1 text-center badge-tip t_07"></div>
+                          <div class="col-md-1 text-center badge-tip t_08"></div>
+                          <div class="col-md-4 text-left pad_left">Crystal Palace</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-3 text-right">Huddersfield</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-3 text-left">Chelsea</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-3 text-right">Watford</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-3 text-left">Brighton</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-3 text-right">Wolves</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-3 text-left">Everton</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-3 text-right">Liverpool</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-3 text-left">West Ham</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item">
+                        <div class="row location">Craven Cottage, London</div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                          <div class="col-md-3 text-right">Southampton</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-2 text-center">flag</div>
+                          <div class="col-md-3 text-left">Burnley</div>
+                          <div class="col-md-1">
+                            <input type="radio">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"> </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_a" value="0">
+                          </div>
+                          <div class="col-md-2">
+                            <input type="number" class="form-control" id="score_b" value="0">
+                          </div>
+                          <div class="col-md-4"> </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="float-right col-md-5 border-secondary border">
+              <div class="row ladder_title border">
+                <div class="col-md-4">Team</div>
+                <div class="col-md-1">P</div>
+                <div class="col-md-1">W</div>
+                <div class="col-md-1">D</div>
+                <div class="col-md-1">L</div>
+                <div class="col-md-1">GF</div>
+                <div class="col-md-1">GA</div>
+                <div class="col-md-1">GD</div>
+                <div class="col-md-1">Pts</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Arsenal</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Bournemouth</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Brighton</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Burnley</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Cardiff City</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Chelsea</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Crystal Palace</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Everton</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Fulham</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Huddersfield</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Leicester City</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Liverpool</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Manchester City</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Manchester United</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Newcastle United</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Southampton</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Tottenham</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Watford</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">West Ham</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">Wolverhampton</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+                <div class="col-md-1">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 w-25">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </div>
+  </div>
