@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountComponent } from './account.component';
 
 describe('AccountComponent', () => {
@@ -8,7 +8,8 @@ describe('AccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccountComponent ]
+      declarations: [ AccountComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
