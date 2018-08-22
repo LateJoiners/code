@@ -1,0 +1,64 @@
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="">Your TipPlus+ Account Details:</h1>
+      </div>
+      <!-- I have no doubt this is not considered the most elegant way to add vertical space -->
+      <div class="col-md-12">
+        <div><h1>&nbsp;</h1></div>
+      </div>
+      <!-- but it does work (for a given value of the word) if not exactly look nice -->
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <p>Name</p>
+      </div>
+      <div class="col-md-8">
+        <p>{{name}}</p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>Date of Birth</p>
+      </div>
+      <div class="col-md-8">
+        <p>{{DOB | date:'MM/dd/yyyy'}}</p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>Username</p>
+      </div>
+      <div class="col-md-8">
+        <p>{{username}}</p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-md-2">
+        <p>Email address</p>
+      </div>
+      <div class="col-md-8">
+        <input type="email" [(ngModel)]="email"
+                          [ngClass]="{ 'form-control' : true, 'border-danger' : blankEmail || emailUpdateFailed }"  placeholder="{{email}}">
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <span *ngIf="blankEmail" class="text-danger">Email cannot be blank.</span>
+        <span *ngIf="emailUpdateFailed" class="text-danger">Backend error - unable to update email address.</span>
+        <span *ngIf="emailUpdateSuccess" class="text-success">Email Successfully Updated</span>
+      </div>
+    </div>
+  </div>
+</div>
