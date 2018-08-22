@@ -54,7 +54,7 @@ export class RoundComponent implements OnInit {
 
   getTeamBadgeID(team: string): string {
     let team_obj = this.teams.find(i => i.name_long === team);
-    return team_obj.id;
+    return 't_' + team_obj.id;
   }
 
   // work out the date in order to work out the round of games to show
