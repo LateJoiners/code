@@ -35,8 +35,7 @@ export class RoundComponent implements OnInit {
 
   sortRoundData(): void {
     // this.sortedGames = this.games;
-    
-    let gamesSort: any[] = this.games.sort((leftSide, rightSide): number => {
+    const gamesSort: any[] = this.games.sort((leftSide, rightSide): number => {
       if (leftSide.date < rightSide.date) { return -1; }
       if (leftSide.date > rightSide.date) { return 1; }
       return 0;
@@ -56,7 +55,7 @@ export class RoundComponent implements OnInit {
 
   // work out the date in order to work out the round of games to show
 
-  //TODO: build a ladder detail view to construct the ladder dynamically
-  //TODO: build a sort by date for the game view
+  // TODO: build a ladder detail view to construct the ladder dynamically
+  // TODO: build a sort by date for the game view
 
 }
