@@ -21,7 +21,7 @@ export class AccountComponent implements OnInit {
   emailUpdateSuccess = false;
 
   constructor() {
-    
+
   }
 
   async attemptEmailUpdate() {
