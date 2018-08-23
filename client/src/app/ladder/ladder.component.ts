@@ -16,12 +16,23 @@ export class LadderComponent implements OnInit {
 
   ngOnInit() {
     this.getCurrentLadder();
+    // this.sortLadderByName();
   }
 
   getCurrentLadder(): void {
     console.log('getCurrentLadder called');
     this.ladderService.getLadder().then(ladder => this.ladder = ladder);
     console.log('ladder: ', this.ladder);
+  }
+
+  sortLadderByName(): any {
+    const ladderSort: any = this.ladder.sort((leftSide, rightSide): number => {
+      if (leftSide.name < rightSide.name) { return -1; }
+      if (leftSide.name > rightSide.name) { return 1; }
+      return 0;
+    });
+    console.log('Sorted Ladder: ', ladderSort);
+    return ladderSort;
   }
 
 }
