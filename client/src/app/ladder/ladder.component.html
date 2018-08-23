@@ -1,3 +1,34 @@
 <p>
   ladder works!
 </p>
+<div *ngIf="ladder">
+  <ul>
+    <li *ngFor="let team of ladder">
+      <span>{{ team.name }}</span>
+    </li>
+  </ul>
+</div>
+
+<div class="float-right col-md-5 border-secondary border">
+    <div class="row ladder_title border">
+      <div class="col-md-4">Team</div>
+      <div class="col-md-1">P</div>
+      <div class="col-md-1">W</div>
+      <div class="col-md-1">D</div>
+      <div class="col-md-1">L</div>
+      <div class="col-md-1">GF</div>
+      <div class="col-md-1">GA</div>
+      <div class="col-md-1">GD</div>
+      <div class="col-md-1">Pts</div>
+    </div>
+    <div class="row" *ngFor="let team of ladder">
+        <div class="col-md-4">{{ team.name }}</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+        <div class="col-md-1">0</div>
+      </div>
