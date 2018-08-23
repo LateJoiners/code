@@ -19,11 +19,12 @@ export class RoundComponent implements OnInit {
 
   games: Fixture[];
   teams: Team[];
-  sortedGames: Fixture[];
+  sortedGames: any[];
 
   ngOnInit() {
     this.getRoundData();
     this.teams = Teams;
+    this.sortRoundData();
   }
 
   getRoundData(): void {
@@ -33,14 +34,14 @@ export class RoundComponent implements OnInit {
   }
 
   sortRoundData(): void {
-    this.sortedGames = this.games;
-
-    this.sortedGames.sort((leftSide, rightSide): number => {
+    // this.sortedGames = this.games;
+    
+    let gamesSort: any[] = this.games.sort((leftSide, rightSide): number => {
       if (leftSide.date < rightSide.date) { return -1; }
       if (leftSide.date > rightSide.date) { return 1; }
       return 0;
     });
-    console.log('Sorted Games: ', this.sortedGames);
+    console.log('Sorted Games: ', gamesSort);
   }
 
   getVenueName(team: string): string {
@@ -54,5 +55,8 @@ export class RoundComponent implements OnInit {
   }
 
   // work out the date in order to work out the round of games to show
+
+  //TODO: build a ladder detail view to construct the ladder dynamically
+  //TODO: build a sort by date for the game view
 
 }
