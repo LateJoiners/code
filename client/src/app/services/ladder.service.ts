@@ -19,12 +19,13 @@ export class LadderService {
     let results = [];
     
     for (let line of this.ladder) {
-      const tmp_team = this.teams.find(i => i.id = line.team_id);
-      const stat_line = line.stats;
-      const team_obj = new TeamStatus(tmp_team.name_long, stat_line);
+      // console.log('parsing: ', line);
+      let tmp_team = this.teams.find(i => i.id === line.team_id);
+      let stat_line = line.stats;
+      let team_obj = new TeamStatus(tmp_team.name_short, stat_line);
       results.push(team_obj.get_team_results());
     }
-    console.log('generate ladder: ', results);
+    // console.log('generate ladder: ', results);
     return results;
   }
 
@@ -38,17 +39,17 @@ export class LadderService {
 
 export class TeamStatus {
   name: string;
-  stats: any [];
+  stats: any;
 
-  constructor(name: string, stats: any []) {
+  constructor(name: string, stats: any) {
     this.name = name;
     this.stats = this.parse_stat_data(stats);
   }
 
-  parse_stat_data(stats: number []): number [] {
+  parse_stat_data(stats: any): any {
     let tmp_stat_data = stats;
-    tmp_stat_data[6] = stats[5] - stats[6];
-    tmp_stat_data[7] = (stats[1] * 3) + stats[2];
+    tmp_stat_data.goal_diff = stats.goals_for - stats.goals_against;
+    tmp_stat_data.points = (stats.wins * 3) + stats.draws;
     
     return tmp_stat_data;
   }
