@@ -1,3 +1,5 @@
+import { EventEmitter, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
 import axios, { AxiosInstance } from 'axios';
 import { environment } from '../../environments/environment';
 import { User } from '../models/user';
@@ -6,10 +8,11 @@ import { StorageService } from './storage.service';
 const LOGGED_IN_USER_KEY = 'late-joiners-user';
 const AUTH_HEADER = 'Authorization';
 
-export class BaseService {
+export class BaseService implements OnDestroy {
   private axiosInstance: AxiosInstance;
-  private loggedInUserUpdated: any;
+  private userSub: any;
   protected user: User;
+  onUserUpdated = new EventEmitter<User>();
 
   private initializeAxiosInstance = () => {
     this.axiosInstance = axios.create({
@@ -22,11 +25,15 @@ export class BaseService {
     }
   }
 
-  constructor(private storageService: StorageService) {
-    this.loggedInUserUpdated = this.storageService.onKeyUpdated.subscribe(
+  constructor(private storageService: StorageService, private router: Router) {
+    this.userSub = this.onUserUpdated.subscribe(
       this.initializeAxiosInstance
     );
     this.initializeAxiosInstance();
+  }
+
+  ngOnDestroy(): void {
+    this.userSub.unsubscribe();
   }
 
   protected get<T>(url: string): Promise<T> {
@@ -51,5 +58,14 @@ export class BaseService {
 
   protected setLoggedInUser(user: User) {
     this.storageService.save(LOGGED_IN_USER_KEY, user);
+    this.onUserUpdated.emit(user);
+  }
+
+  public logout() {
+    this.storageService.delete(LOGGED_IN_USER_KEY);
+    this.onUserUpdated.emit(null);
+
+    const homeUrl = '';
+    this.router.navigateByUrl(homeUrl);
   }
 }

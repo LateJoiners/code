@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { SanityService } from './sanity.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { User } from './models/user';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,25 @@ import { SanityService } from './sanity.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-
-  // If changing this, please change the test in
-  // the corresponding test file as well
+export class AppComponent implements OnInit, OnDestroy {
   title = 'TipPlus+';
+  user: User;
+  userSub: any;
 
-  constructor(private sanityService: SanityService) {}
+  constructor(private authService: AuthenticationService) {}
 
   ngOnInit() {
-    this.sanityService.canMakeCallToApi().then(msg => {
-      console.log('Call to API Succeeded:', msg);
-    }).catch(error => {
-      console.log('Call to API Failed:', error);
+    this.user = this.authService.getUser();
+    this.userSub = this.authService.onUserUpdated.subscribe(user => {
+      this.user = user;
     });
+  }
+
+  ngOnDestroy(): void {
+    this.userSub.unsubscribe();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

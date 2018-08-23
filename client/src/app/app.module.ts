@@ -5,18 +5,18 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccountComponent } from './account/account.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CanActivateViaAuthGuard } from './auth.guard';
+import { LadderComponent } from './ladder/ladder.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
+import { ResultsComponent } from './results/results.component';
 import { RoundComponent } from './round/round.component';
 import { SanityService } from './sanity.service';
 import { SportsComponent } from './sports/sports.component';
-import { AccountComponent } from './account/account.component';
-import { LadderComponent } from './ladder/ladder.component';
-import { ResultsComponent } from './results/results.component';
-
 
 registerLocaleData(loccaleEnAu);
 
@@ -40,7 +40,7 @@ registerLocaleData(loccaleEnAu);
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [SanityService, {provide: LOCALE_ID, useValue: 'en-AU'}],
+  providers: [SanityService, {provide: LOCALE_ID, useValue: 'en-AU'}, CanActivateViaAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
