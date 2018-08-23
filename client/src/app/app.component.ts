@@ -9,7 +9,9 @@ import { SanityService } from './sanity.service';
 
 export class AppComponent implements OnInit {
 
-  title = 'client';
+  // If changing this, please change the test in
+  // the corresponding test file as well
+  title = 'TipPlus+';
 
   constructor(private sanityService: SanityService) {}
 
