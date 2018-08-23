@@ -2,7 +2,7 @@ import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import loccaleEnAu from '@angular/common/locales/en-AU';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { RoundComponent } from './round/round.component';
 import { SanityService } from './sanity.service';
 import { SportsComponent } from './sports/sports.component';
+import { AccountComponent } from './account/account.component';
 
 
 registerLocaleData(loccaleEnAu);
@@ -24,12 +25,14 @@ registerLocaleData(loccaleEnAu);
     RegisterComponent,
     PageNotFoundComponent,
     RoundComponent,
-    SportsComponent
+    SportsComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
