@@ -1,45 +1,8 @@
-<div class="">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6" style="background:#0039a6">
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white"> TipPlus</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">Tournaments
-              <br> </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6" style="background:#0039a6">
-        <ul class="nav nav-pills justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Help
-              <br> </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-white">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#">Log Out</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="py-3">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <h1 class="">Results</h1>
-      </div>
-      <div class="col-md-6 text-center">
-        <h1 class="">English Premier League</h1>
+      <div class="col-md-12 text-center">
+        <h1 class="">{{ sport }} -- {{ tournament }}</h1>
       </div>
     </div>
   </div>
@@ -47,180 +10,32 @@
 <div class="w-100 py-2">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h2>This Week's Results</h2>
+      <div class="col-md-12 text-center">
+        <h2>Results of completed matches in the week leading up to<BR>{{ date }}</h2>
         <div class="row">
           <!-- this is the column (below) for the games to pick from -->
           <div class="col-md-7">
             <div class="row border">
               <div class="col-md-12">
-                <div>11 August 2018
+                <div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <div class="row location">Old Trafford, Manchester</div>
-                      <div class="row ">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right pad_right">Man Utd</div>
-                        <div class="col-md-1 text-center badge-tip t_01"></div>
-                        <div class="col-md-1 text-center badge-tip t_02"></div>
-                        <div class="col-md-4 text-left pad_left">Leicester</div>
-                        <div class="col-md-1 "></div>
+                    <li class="list-group-item" *ngFor="let result of results">
+                      <div class="row location">
+                        <div class="col-md-5 text-left">{{ result.location }}</div>
+                        <div class="col-md-2"><!-- just to take up space --> </div>
+                        <div class="col-md-5">{{ result.date }}</div>
                       </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">2-1</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">St. James' Park, Newcastle</div>
                       <div class="row">
                         <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Newcastle</div>
-                        <div class="col-md-1 text-center badge-tip t_03"></div>
-                        <div class="col-md-1 text-center badge-tip t_04"></div>
-                        <div class="col-md-4 text-left">Spurs</div>
+                        <div class="col-md-4 text-right">{{ result.team1.replace(underscoreRE,' ') }}</div>
+                        <div class="col-md-1 text-center badge-tip team{{ result.team1 }}"></div>
+                        <div class="col-md-1 text-center badge-tip team{{ result.team2 }}"></div>
+                        <div class="col-md-4 text-left">{{ result.team2.replace(underscoreRE,' ') }}</div>
                         <div class="col-md-1"></div>
                       </div>
                       <div class="row text-center">
                         <div class="col-md-5"></div>
-                        <div class="col-md-2">0-2</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">Vitality Stadium, Bournemouth</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Bournemouth</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Cardiff</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">1-1</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">Craven Cottage, London</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Fulham</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Crystal Palace</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">0-1</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">John Smith's Stadium, Huddersfield</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Huddersfield</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Chelsea</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">0-3</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">Vicarage Road, Watford</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Watford</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Brighton</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">0-0</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="row border">
-              <div class="col-md-12">
-                <div>12 August 2018
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <div class="row location">Molineux Stadium, Wolverhampton</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Wolves</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Everton</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">1-3</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">Anfield, Liverpool</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Liverpool</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">West Ham</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">3-2</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">St Mary's Stadium, Southampton</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Southampton</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Burnley</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">0-1</div>
-                        <div class="col-md-5"></div>
-                      </div>
-                    </li>
-                    <li class="list-group-item">
-                      <div class="row location">Emirates Stadium, London</div>
-                      <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">Arsenal</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-1 text-center">flag</div>
-                        <div class="col-md-4 text-left">Man City</div>
-                        <div class="col-md-1"></div>
-                      </div>
-                      <div class="row text-center">
-                        <div class="col-md-5"></div>
-                        <div class="col-md-2">2-2</div>
+                        <div class="col-md-2">{{ result.team1Score }}-{{ result.team2Score }}</div>
                         <div class="col-md-5"></div>
                       </div>
                     </li>
