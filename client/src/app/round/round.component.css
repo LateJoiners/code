@@ -113,3 +113,11 @@
     background-color: #0039A6 !important;
     color: #ffffff;
 }
+
+li .game_date {
+    margin-left: -20px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(50, 144, 199);
+}

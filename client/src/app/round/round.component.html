@@ -11,7 +11,7 @@
                   <div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item" *ngFor="let game of games">
-                        <div *ngIf="displayGameDate(game.date)">{{ niceDate(game.date) }}</div>
+                        <div *ngIf="displayGameDate(game.date)" class="game_date">{{ niceDate(game.date) }}</div>
                         <div class="row location">{{ getVenueName(game.home)}}</div>
                         <div class="row ">
                           <div class="col-md-1"><input type="radio"></div>
