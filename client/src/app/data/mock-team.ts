@@ -10,13 +10,13 @@ export const Teams = [
       {
         'id': '02',
         'name_long': 'Leicester City',
-        'name_short': 'LCY',
+        'name_short': 'Leicester',
         'venue': 'King Power Stadium'
       },
       {
         'id': '03',
         'name_long': 'AFC Bournemouth',
-        'name_short': 'AFC',
+        'name_short': 'Bournemouth',
         'venue': 'Dean Court'
       },
       {
@@ -34,7 +34,7 @@ export const Teams = [
       {
         'id': '06',
         'name_long': 'Crystal Palace',
-        'name_short': 'CRY',
+        'name_short': 'Crystal Pal',
         'venue': 'Selhurst Park'
       },
       {
