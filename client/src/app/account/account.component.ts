@@ -12,6 +12,7 @@ export class AccountComponent implements OnInit {
   username = 'Bob';
   email = 'bob@somewhere.com';
   blankEmail = false;
+
   // Was trying to use one variable w/ null to model all three states
   // (no update attempted, update failed, update succeeded) but ran into
   // odd behaviour most likely due to my lack of understanding on exactly how
@@ -20,8 +21,7 @@ export class AccountComponent implements OnInit {
   emailUpdateSuccess = false;
 
   constructor() {
-    this.emailUpdateSuccess = true;
-
+    
   }
 
   async attemptEmailUpdate() {

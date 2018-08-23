@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { RoundComponent } from './round/round.component';
 import { SportsComponent } from './sports/sports.component';
 import { AccountComponent } from './account/account.component';
+import { ResultsComponent } from './results/results.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'round', component: RoundComponent },
   { path: 'sports', component: SportsComponent },
   { path: 'account', component: AccountComponent },
+  { path: 'results', component: ResultsComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

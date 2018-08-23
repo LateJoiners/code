@@ -1,0 +1,57 @@
+.ladder_title {
+    font-weight: bold;
+}
+
+.location {
+    font-size: smaller;
+}
+
+.ul_no_bullet {
+    list-style-type: none;
+}
+
+.box_score {
+    border: solid;
+}
+
+.game {
+    width: 175%;
+}
+
+.badge-tip {
+    background-image: url(../../assets/images/badges-50-sprite.png);
+    background-repeat: no-repeat;
+    /*width: 50px;*/
+    height: 50px;
+    /*padding: 25px;*/
+    /*border:solid;*/
+}
+
+/* teams */
+
+.t_01 {
+    background-position: -548px -400px;
+    /*border:solid;*/
+
+}
+
+.t_02 {
+    background-position: -498px -250px;
+
+}
+
+.t_03 {
+    background-position: -550px -500px;
+}
+
+.t_04 {
+    background-position: -500px -650px;
+}
+
+.pad_left {
+    padding-left: 20px;
+}
+
+.pad_right {
+    padding-right: 20px;
+}

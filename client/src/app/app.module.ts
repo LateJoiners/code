@@ -15,6 +15,7 @@ import { SanityService } from './sanity.service';
 import { SportsComponent } from './sports/sports.component';
 import { AccountComponent } from './account/account.component';
 import { LadderComponent } from './ladder/ladder.component';
+import { ResultsComponent } from './results/results.component';
 
 
 registerLocaleData(loccaleEnAu);
@@ -28,7 +29,8 @@ registerLocaleData(loccaleEnAu);
     RoundComponent,
     SportsComponent,
     AccountComponent,
-    LadderComponent
+    LadderComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
