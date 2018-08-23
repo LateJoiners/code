@@ -2,10 +2,10 @@
 // can make their predications/selections
 
 import { Component, OnInit } from '@angular/core';
-import { GamesService } from '../services/games.service';
-import { Fixture } from '../models/fixture';
 import { Teams } from '../data/mock-team';
+import { Fixture } from '../models/fixture';
 import { Team } from '../models/team';
+import { GamesService } from '../services/games.service';
 
 @Component({
   selector: 'app-round',
@@ -28,9 +28,7 @@ export class RoundComponent implements OnInit {
   }
 
   getRoundData(): void {
-    console.log('getRoundData called');
     this.gamesService.getRound().then(games => this.games = games);
-    console.log('from inside getRoundData:', this.games);
   }
 
   getVenueName(team: string): string {
@@ -57,7 +55,6 @@ export class RoundComponent implements OnInit {
     const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'};
     const date_str_split = date.split('/');
     const old_date = new Date(Number(date_str_split[2]), Number(date_str_split[1]) - 1, Number(date_str_split[0]));
-    // console.log(old_date.toLocaleDateString('en-AU', options));
     return old_date.toLocaleDateString('en-US', options);
   }
 

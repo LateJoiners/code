@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Round } from '../data/round';
 import { Fixture } from '../models/fixture';
@@ -19,12 +18,10 @@ export class GamesService {
       if (leftSide.date > rightSide.date) { return 1; }
       return 0;
     });
-    console.log('Sorted Games: ', gamesSort);
     return gamesSort;
   }
 
   getRound(): Promise<Array<Fixture>> {
-    console.log('getRound called');
     return Promise.resolve(this.sortRoundData());
   }
 }

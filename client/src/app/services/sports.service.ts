@@ -1,30 +1,24 @@
-import { Injectable } from '@angular/core';
-import { Sports } from '../data/sports';
-import { Sport } from '../models/sport';
-
-import { Football_Leagues } from '../data/football_leagues';
+import { Injectable } from "@angular/core";
+import { Football_Leagues } from "../data/football_leagues";
+import { Sports } from "../data/sports";
+import { Sport } from "../models/sport";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class SportsService {
-
-  this_sports;
+  sports: Sport[];
 
   constructor() {
-    this.this_sports = <Array<Sport>>Sports;
-    // const sport_obj: Sport;
-    for (const sport_obj of this.this_sports) {
-
+    this.sports = Sports;
+    for (const sport_obj of this.sports) {
       if (sport_obj.label === 'Football') {
         sport_obj.leagues = Football_Leagues;
       }
     }
-   }
+  }
 
   getSports(): Promise<Array<Sport>> {
-    console.log('getSports called');
-    console.log(this.this_sports);
-    return Promise.resolve(this.this_sports);
+    return Promise.resolve(this.sports);
   }
 }

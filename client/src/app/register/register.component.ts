@@ -20,9 +20,6 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.authService.onUserUpdated.subscribe(user => {
-      console.log('user', user);
-    });
   }
 
   async login() {

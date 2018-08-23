@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../models/user';
 import { BaseService } from './base.service';
 import { StorageService } from './storage.service';
@@ -7,8 +8,8 @@ import { StorageService } from './storage.service';
   providedIn: 'root'
 })
 export class AuthenticationService extends BaseService {
-  constructor(storageService: StorageService)  {
-    super(storageService);
+  constructor(storageService: StorageService, router: Router)  {
+    super(storageService, router);
   }
 
   async login(emailOrUsername: string, password: string): Promise<User> {

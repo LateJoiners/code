@@ -2,8 +2,8 @@
 // the USER can select from in order to joing a tournament
 
 import { Component, OnInit } from '@angular/core';
-import { SportsService } from '../services/sports.service';
 import { Sport } from '../models/sport';
+import { SportsService } from '../services/sports.service';
 
 @Component({
   selector: 'app-sports',
@@ -19,11 +19,9 @@ export class SportsComponent implements OnInit {
 
   ngOnInit() {
     this.getSportsData();
-    console.log(this.sports);
   }
 
   getSportsData(): void {
-    console.log('getSportsData called');
     this.sportsService.getSports().then(sports => this.sports = sports);
   }
 
