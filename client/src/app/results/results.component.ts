@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-  private sport = 'Football';
-  private tournament = 'English Premier League';
-  private date = 'Thursday, 23rd August 2018';
-  private results = [ { location: 'Old Trafford, Manchester',
+  sport = 'Football';
+  tournament = 'English Premier League';
+  date = 'Thursday, 23rd August 2018';
+  results = [ { location: 'Old Trafford, Manchester',
                         date: 'Thursday, 23rd August 2018',
                         team1: 'Manchester_United',
                         team2: 'Leicester_City',
@@ -71,7 +71,7 @@ export class ResultsComponent implements OnInit {
                         team2Score: '2'}
                        ];
 
-  private underscoreRE = /_/;
+  underscoreRE = /_/;
 
   constructor() { }
 
