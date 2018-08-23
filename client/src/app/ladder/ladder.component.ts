@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Teams } from '../data/mock-team';
+import { Ladder } from '../data/ladder';
+import { LadderService } from '../services/ladder.service';
 
 @Component({
   selector: 'app-ladder',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LadderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ladderService: LadderService) { }
+
+  ladder: any [];
 
   ngOnInit() {
+    this.getCurrentLadder();
+  }
+
+  getCurrentLadder(): void {
+    console.log('getCurrentLadder called');
+    this.ladderService.getLadder().then(ladder => this.ladder = ladder);
+    console.log('ladder: ', this.ladder);
   }
 
 }
