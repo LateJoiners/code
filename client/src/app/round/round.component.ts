@@ -6,6 +6,7 @@ import { GamesService } from '../services/games.service';
 import { Fixture } from '../models/fixture';
 import { Teams } from '../data/mock-team';
 import { Team } from '../models/team';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-round',
@@ -20,27 +21,17 @@ export class RoundComponent implements OnInit {
   games: Fixture[];
   teams: Team[];
   sortedGames: any[];
+  tmp_date: string;
 
   ngOnInit() {
     this.getRoundData();
     this.teams = Teams;
-    this.sortRoundData();
   }
 
   getRoundData(): void {
     console.log('getRoundData called');
     this.gamesService.getRound().then(games => this.games = games);
     console.log('from inside getRoundData:', this.games);
-  }
-
-  sortRoundData(): void {
-    // this.sortedGames = this.games;
-    const gamesSort: any[] = this.games.sort((leftSide, rightSide): number => {
-      if (leftSide.date < rightSide.date) { return -1; }
-      if (leftSide.date > rightSide.date) { return 1; }
-      return 0;
-    });
-    console.log('Sorted Games: ', gamesSort);
   }
 
   getVenueName(team: string): string {
@@ -53,9 +44,24 @@ export class RoundComponent implements OnInit {
     return 't_' + team_obj.id;
   }
 
-  // work out the date in order to work out the round of games to show
+  displayGameDate(date_to_check: string): boolean {
+    if (date_to_check === this.tmp_date) {
+      return false;
+    } else {
+      this.tmp_date = date_to_check;
+      return true;
+    }
+  }
+
+  niceDate(date: string) {
+    // reformats date string to a more reader-friendly formatting
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric'};
+    const date_str_split = date.split('/');
+    const old_date = new Date(Number(date_str_split[2]), Number(date_str_split[1]) - 1, Number(date_str_split[0]));
+    // console.log(old_date.toLocaleDateString('en-AU', options));
+    return old_date.toLocaleDateString('en-US', options);
+  }
 
   // TODO: build a ladder detail view to construct the ladder dynamically
-  // TODO: build a sort by date for the game view
 
 }

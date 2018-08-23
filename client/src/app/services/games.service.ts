@@ -14,7 +14,6 @@ export class GamesService {
   round_one: Fixture[] = Round;
 
   sortRoundData(): Fixture[] {
-    // this.sortedGames = this.games;
     const gamesSort: Fixture[] = this.round_one.sort((leftSide, rightSide): number => {
       if (leftSide.date < rightSide.date) { return -1; }
       if (leftSide.date > rightSide.date) { return 1; }
