@@ -8,6 +8,9 @@ import { SanityService } from './sanity.service';
 })
 
 export class AppComponent implements OnInit {
+
+  title = 'client';
+
   constructor(private sanityService: SanityService) {}
 
   ngOnInit() {
