@@ -32,7 +32,7 @@ export class BaseService implements OnDestroy {
     this.initializeAxiosInstance();
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy = () => {
     this.userSub.unsubscribe();
   }
 
