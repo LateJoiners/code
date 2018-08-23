@@ -6,7 +6,6 @@ import { GamesService } from '../services/games.service';
 import { Fixture } from '../models/fixture';
 import { Teams } from '../data/mock-team';
 import { Team } from '../models/team';
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-round',

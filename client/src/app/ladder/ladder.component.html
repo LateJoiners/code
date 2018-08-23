@@ -1,3 +1,24 @@
-<p>
-  ladder works!
-</p>
+<div class="float-right col-md-12 border-secondary border">
+  <div class="row ladder_title border">
+    <div class="col-md-4">Team</div>
+    <div class="col-md-1">P</div>
+    <div class="col-md-1">W</div>
+    <div class="col-md-1">D</div>
+    <div class="col-md-1">L</div>
+    <div class="col-md-1">GF</div>
+    <div class="col-md-1">GA</div>
+    <div class="col-md-1">GD</div>
+    <div class="col-md-1">Pts</div>
+  </div>
+  <div class="row" *ngFor="let team of ladder">
+    <div class="col-md-4">{{ team.name }}</div>
+    <div class="col-md-1">{{ team.stats.played }}</div>
+    <div class="col-md-1">{{ team.stats.wins }}</div>
+    <div class="col-md-1">{{ team.stats.draws }}</div>
+    <div class="col-md-1">{{ team.stats.losses }}</div>
+    <div class="col-md-1">{{ team.stats.goals_for }}</div>
+    <div class="col-md-1">{{ team.stats.goals_against }}</div>
+    <div class="col-md-1">{{ team.stats.goal_diff }}</div>
+    <div class="col-md-1">{{ team.stats.points }}</div>
+  </div>
+</div>
