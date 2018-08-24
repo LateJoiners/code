@@ -3,7 +3,11 @@
     <ng-template ngbPanelContent>
       <ul class="sport.leagues list-group">
         <li *ngFor="let league of sport.leagues" class="list-group-item">
-          <span>{{ league.name }}</span>
+          <div class="league">{{ league.name }}</div>
+          <div class="league data" *ngIf="league.data">
+            <span>{{ league.data.tournaments }} active tournaments </span>
+            <span>with {{ league.data.players }} players</span>
+          </div>
         </li>
       </ul>
     </ng-template>
