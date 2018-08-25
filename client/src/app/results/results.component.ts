@@ -60,11 +60,11 @@ export class ResultsComponent implements OnInit {
   }
 
   getResults(): void {
-    this.results = this.resService.getResults();
+    this.resService.getResults().subscribe(results => this.results = results);
   }
 
   getTips(): void {
-    this.tips = this.resService.getTips();
+    this.resService.getTips().subscribe(tips => this.tips = tips);
   }
 
   getTipMatchesString(result) {

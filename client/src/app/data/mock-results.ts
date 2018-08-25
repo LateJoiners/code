@@ -1,6 +1,8 @@
+import { Fixture } from '../models/fixture';
+
 // mock data - match results
 
-export const Results = [
+export const Results: Fixture[] = [
                     { id: '1',
                       date: 'Thursday, 23rd August 2018',
                       home: '01',
