@@ -22,7 +22,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  async login() {
+  async register() {
+    console.log(this.password);
     this.authService.register(
       this.username,
       this.email,
