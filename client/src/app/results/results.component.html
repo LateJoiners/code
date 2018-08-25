@@ -19,24 +19,29 @@
               <div class="col-md-12">
                 <div>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item" *ngFor="let result of results">
+                    <li class="list-group-item {{ getResultBGClass(result) }}" *ngFor="let result of results">
                       <div class="row location">
-                        <div class="col-md-5 text-left">{{ result.location }}</div>
+                        <div class="col-md-5 text-left text-white">{{ result.location }}</div>
                         <div class="col-md-2"><!-- just to take up space --> </div>
-                        <div class="col-md-5">{{ result.date }}</div>
+                        <div class="col-md-5 text-white">{{ result.date }}</div>
                       </div>
                       <div class="row">
                         <div class="col-md-1"></div>
-                        <div class="col-md-4 text-right">{{ result.team1.replace(underscoreRE,' ') }}</div>
+                        <div class="col-md-4 text-right text-white">{{ result.team1.replace(underscoreRE,' ') }}</div>
                         <div class="col-md-1 text-center badge-tip team{{ result.team1 }}"></div>
                         <div class="col-md-1 text-center badge-tip team{{ result.team2 }}"></div>
-                        <div class="col-md-4 text-left">{{ result.team2.replace(underscoreRE,' ') }}</div>
+                        <div class="col-md-4 text-left text-white">{{ result.team2.replace(underscoreRE,' ') }}</div>
                         <div class="col-md-1"></div>
                       </div>
                       <div class="row text-center">
                         <div class="col-md-5"></div>
-                        <div class="col-md-2">{{ result.team1Score }}-{{ result.team2Score }}</div>
+                        <div class="col-md-2 text-white">{{ result.team1Score }}-{{ result.team2Score }}</div>
                         <div class="col-md-5"></div>
+                      </div>
+                      <div class="row text-center">
+                        <div class="col-md-12 text-white">
+                          {{ getTipMatchesString(result) }}
+                        </div>
                       </div>
                     </li>
                   </ul>
