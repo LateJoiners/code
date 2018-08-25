@@ -1,22 +1,23 @@
 import { Injectable } from '@angular/core';
-import { Tips } from '../data/mock-tips';
-import { Results } from '../data/mock-results';
 import { Observable, of } from 'rxjs';
-import { Tip } from '../models/tip';
-import { Fixture } from '../models/fixture';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResultsService {
 
-  constructor() { }
+  result: any;
+  uri = 'http://localhost:3000/api';
 
-  getTips(): Observable<Tip[]> {
-    return of(Tips);
+  constructor(private http: HttpClient) { }
+
+  getTips() {
+    return this.http.get(`${this.uri}/tips/mock`);
   }
 
-  getResults(): Observable<Fixture[]> {
-    return of(Results);
+  getResults() {
+    return this.http.get(`${this.uri}/results/mock`);
   }
 }
