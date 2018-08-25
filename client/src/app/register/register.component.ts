@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  async login() {
+  async register() {
     this.authService.register(
       this.username,
       this.email,

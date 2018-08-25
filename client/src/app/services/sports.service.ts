@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { Football_Leagues } from "../data/football_leagues";
-import { Sports } from "../data/sports";
-import { Sport } from "../models/sport";
+import { Injectable } from '@angular/core';
+import { Football_Leagues } from '../data/football_leagues';
+import { Sports } from '../data/sports';
+import { Sport } from '../models/sport';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class SportsService {
   sports: Sport[];
