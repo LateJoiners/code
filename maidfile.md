@@ -145,6 +145,7 @@ Post install script will run angular-cli in prod mode
 
 cd ./client
 npm i
+npm run build
 
 ```
 
