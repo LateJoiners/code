@@ -23,7 +23,6 @@ export class RegisterComponent implements OnInit {
   }
 
   async register() {
-    console.log(this.password);
     this.authService.register(
       this.username,
       this.email,
