@@ -8,10 +8,11 @@ import { AuthenticationService } from '../services/authentication.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerAttemptFailed = false;
+  registerAttemptFailedReason: string = null;
   username: string;
   email: string;
   password: string;
+  confirmPassword: string;
   displayName: string;
 
   constructor(
@@ -23,6 +24,11 @@ export class RegisterComponent implements OnInit {
   }
 
   async register() {
+    if (this.password !== this.confirmPassword) {
+      this.registerAttemptFailedReason = 'Your password and confirm password must be the same!';
+      return;
+    }
+
     this.authService.register(
       this.username,
       this.email,
@@ -33,9 +39,8 @@ export class RegisterComponent implements OnInit {
         const homeUrl = '';
         this.router.navigateByUrl(homeUrl);
       })
-      .catch(() => {
-        this.registerAttemptFailed = true;
+      .catch((err) => {
+        this.registerAttemptFailedReason = err.message;
       });
   }
-
 }
