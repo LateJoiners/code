@@ -37,7 +37,7 @@ const routes: Routes = [
     component: ResultsComponent,
     canActivate: [IsLoggedInGuard]
   },
-  { path: '', redirectTo: '/sports', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
