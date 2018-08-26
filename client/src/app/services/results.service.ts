@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ResultsService {
 
   result: any;
-  uri = 'http://localhost:3000/api';
+  uri = 'https://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 
