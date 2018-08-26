@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { Football_Leagues } from "../data/football_leagues";
-import { League_Data } from "../data/league_data";
-import { Sports } from "../data/sports";
-import { Sport } from "../models/sport";
+import { Injectable } from '@angular/core';
+import { Football_Leagues } from '../data/football_leagues';
+import { League_Data } from '../data/league_data';
+import { Sports } from '../data/sports';
+import { Sport } from '../models/sport';
 
 
 
