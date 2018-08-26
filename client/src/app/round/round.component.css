@@ -121,3 +121,7 @@ li .game_date {
     font-weight: bold;
     color: rgb(50, 144, 199);
 }
+
+.games_title{
+    display: inline-block;
+}
