@@ -21,6 +21,7 @@ export class RoundComponent implements OnInit {
   teams: Team[];
   sortedGames: any[];
   tmp_date: string;
+  display='none';
 
   ngOnInit() {
     this.getRoundData();
@@ -59,5 +60,17 @@ export class RoundComponent implements OnInit {
   }
 
   // TODO: build a ladder detail view to construct the ladder dynamically
+
+  openModal(){
+
+    this.display='block'; 
+
+ }
+
+ onCloseHandled(){
+
+  this.display='none'; 
+
+}
 
 }
