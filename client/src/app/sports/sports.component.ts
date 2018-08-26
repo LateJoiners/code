@@ -32,4 +32,12 @@ export class SportsComponent implements OnInit {
       this.selectedSport = null;
     }
   }
+
+  gotoLeague(name: string) {
+    if (name === 'English Premier League') {
+      // goto the round page
+    } else {
+      // ignore
+    }
+  }
 }
