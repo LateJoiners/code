@@ -5,6 +5,8 @@ const {allowedOrigins} = require('../config');
 
 const {authenticationController} = require('./authentication');
 const { sanityController } = require('./sanity');
+const { resultsController } = require('./results');
+const { tipsController } = require('./tips');
 
 const notFoundHandler = (req, res, next) => {
     const err = new Error('Not Found');
@@ -31,6 +33,8 @@ const register = app => {
 
     app.use('/api/authentication', authenticationController);
     app.use('/api/sanity', sanityController);
+    app.use('/api/results', resultsController);
+    app.use('/api/tips', tipsController);
 
     app.use(express.static(__dirname + '../../assets'));
 

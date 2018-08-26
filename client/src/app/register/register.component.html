@@ -4,30 +4,55 @@
     <div class="form-group">
       <label for="email">Email</label>
       <div class="input-group">
-        <input id="email" class="form-control" placeholder="Your email" name="dp"
-        required>
+        <input
+              type="text"
+              name="email"
+              [(ngModel)]="email"
+              [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
+              placeholder="Your email" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Username</label>
+      <div class="input-group">
+        <input
+              type="text"
+              name="username"
+              [(ngModel)]="username"
+              [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
+              placeholder="Your username" required>
       </div>
     </div>
     <div class="form-group">
         <label for="displayName">Display Name</label>
         <div class="input-group">
-          <input id="displayName" class="form-control" placeholder="Display name" name="dp"
-          required>
+          <input
+          type="text"
+          name="displayName"
+          [(ngModel)]="displayName"
+          [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
+          placeholder="Display Name" required>
         </div>
       </div>
     <div class="form-group">
       <label for="password">Password</label>
+      <input
+        type="text"
+        name="password"
+        [(ngModel)]="password"
+        [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
+        placeholder="Password" required>
       <div class="input-group">
         <input
-          id="password"
-          class="form-control"
-          type="password"
-          placeholder="Password..." name="password"
-          required>
+          type="text"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
+          placeholder="Confirm password" required>
       </div>
     </div>
 
-    <button class="btn btn-primary">Register</button>
+    <button class="btn btn-primary" (click)='register()'>Register</button>
     <p>
       Already have an account? Why not <a routerLink="/login">login?</a>
     </p>

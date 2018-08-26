@@ -27,104 +27,74 @@
     /*border:solid;*/
 }
 
-/* teams */
-
-.teamManchester_United {
-    background-position: -550px -400px;
-}
-
-.teamLeicester_City {
-    background-position: -500px -250px;
-}
-
-.teamWatford {
-    background-position: -700px -50px;
-}
-
-.teamBournemouth {
-    background-position: -100px -250px;
-}
-
-.teamNewcastle_United {
-    background-position: -550px -500px;
-}
-
-.teamCrystal_Palace {
-    background-position: -100px -350px;
-}
-
-.teamChelsea {
-    background-position: -300px -300px;
-}
-
-.teamEverton {
-    background-position: 0px -400px;
-}
-
-.teamTottenham_Hotspur {
-    background-position: -500px -650px;
-}
-
-.teamManchester_City {
-    background-position: -500px -500px;
-}
-
-.teamArsenal {
-    background-position: 0px -100px;
-}
-
-.teamSouthampton {
-    background-position: -600px -500px;
-}
-
-.teamLiverpool {
-    background-position: -500px -450px;
-}
-
-.teamWest_Ham {
-    background-position: -700px -150px;
-}
-
-.teamBurnley {
-    background-position: -50px -300px;
-}
-
-.teamCardiff_City {
-    background-position: -150px -300px;
-}
-
-.teamBrighton {
-    background-position: -200px -200px;
-}
-
-.teamFulham {
-    background-position: -450px -200px;
-}
-
-.teamWolverhampton {
-    background-position: -650px -400px;
-}
-
-.teamHuddersfield {
-    background-position: -150px -450px;
-}
+/* teams w/ badge co-ords offset */
 
 .t_01 {
     background-position: -548px -400px;
-    /*border:solid;*/
 }
 
 .t_02 {
     background-position: -498px -250px;
-
 }
 
 .t_03 {
-    background-position: -550px -500px;
+    background-position: -100px -250px;
 }
 
 .t_04 {
+    background-position: -0px -100px;
+}
+
+.t_05 {
+    background-position: -450px -200px;
+}
+
+.t_06 {
+    background-position: -100px -350px;
+}
+
+.t_07 {
+    background-position: -150px -450px;
+}
+
+.t_08 {
+    background-position: -300px -300px;
+}
+
+.t_09 {
+    background-position: -550px -500px;
+}
+
+.t_10 {
     background-position: -500px -650px;
+}
+
+.t_11 {
+    background-position: -700px -50px;
+}
+
+.t_12 {
+    background-position: -700px -100px;
+}
+
+.t_13 {
+    background-position: -700px -400px;
+}
+
+.t_14 {
+    background-position: -0px -400px;
+}
+
+.t_15 {
+    background-position: -149px -300px;
+}
+
+.t_16 {
+    background-position: -500px -500px;
+}
+
+.t_18 {
+    background-position: -700px -150px;
 }
 
 .pad_left {
@@ -133,4 +103,21 @@
 
 .pad_right {
     padding-right: 20px;
+}
+
+.blue-bg {
+    background-color: #0039A6;
+}
+
+.bg-secondary {
+    background-color: #0039A6 !important;
+    color: #ffffff;
+}
+
+li .game_date {
+    margin-left: -20px;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(50, 144, 199);
 }

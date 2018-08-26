@@ -5,13 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "start:aot": "node index.js",
-    "build": "ng build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "build": "ng build --aot --prod"
   },
   "engines": {
     "node": "9.11.1",

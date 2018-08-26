@@ -8,7 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountComponent } from './account/account.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CanActivateViaAuthGuard } from './auth.guard';
+import { IsLoggedInGuard } from './is-logged-in.guard';
+import { IsNotLoggedInGuard } from './is-not-logged-in.guard';
 import { LadderComponent } from './ladder/ladder.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -40,7 +41,12 @@ registerLocaleData(loccaleEnAu);
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [SanityService, {provide: LOCALE_ID, useValue: 'en-AU'}, CanActivateViaAuthGuard],
+  providers: [
+    SanityService,
+    {provide: LOCALE_ID, useValue: 'en-AU'},
+    IsLoggedInGuard,
+    IsNotLoggedInGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

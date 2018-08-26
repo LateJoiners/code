@@ -5,8 +5,9 @@ import { Sports } from "../data/sports";
 import { Sport } from "../models/sport";
 
 
+
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class SportsService {
   sports: Sport[];
