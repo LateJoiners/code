@@ -6,7 +6,7 @@
           <div class="league">{{ league.name }}</div>
           <div class="league data" *ngIf="league.data">
             <!-- // add a button -->
-            <input type="button" value="join" [routerLink]="['/round']">
+            <input type="button" value="join" [routerLink]="['/round']" class=".btn-primary">
             <!-- <button (click)="gotoLeague(league.name)">Join!</button> -->
             <!-- <span>{{ league.data.tournaments }} active tournaments </span>
             <span>with {{ league.data.players }} players</span> -->
