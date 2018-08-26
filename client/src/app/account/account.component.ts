@@ -54,7 +54,10 @@ export class AccountComponent implements OnInit {
     this.userSub = this.authService.onUserUpdated.subscribe(user => {
       this.user = user;
     });
-    console.log(this.user);
+    this.name = this.user.displayName;
+    this.email = this.user.email;
+    this.username = this.user.username;
+    // console.log(this.user);
   }
 
   ngOnDestroy = () => {
