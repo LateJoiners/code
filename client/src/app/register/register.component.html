@@ -37,14 +37,14 @@
     <div class="form-group">
       <label for="password">Password</label>
       <input
-        type="text"
+        type="password"
         name="password"
         [(ngModel)]="password"
         [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
         placeholder="Password" required>
       <div class="input-group">
         <input
-          type="text"
+          type="password"
           name="confirmPassword"
           [(ngModel)]="confirmPassword"
           [ngClass]="{ 'form-control' : true, 'border-danger' : registerAttemptFailedReason !== null }"
