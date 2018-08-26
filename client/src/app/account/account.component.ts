@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-account',
@@ -12,6 +13,8 @@ export class AccountComponent implements OnInit {
   username = 'Bob';
   email = 'bob@somewhere.com';
   blankEmail = false;
+  user;
+  userSub;
 
   // Was trying to use one variable w/ null to model all three states
   // (no update attempted, update failed, update succeeded) but ran into
@@ -20,7 +23,7 @@ export class AccountComponent implements OnInit {
   emailUpdateFailed = false;
   emailUpdateSuccess = false;
 
-  constructor() {
+  constructor(private authService: AuthenticationService) {
 
   }
 
@@ -47,6 +50,19 @@ export class AccountComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.user = this.authService.getUser();
+    this.userSub = this.authService.onUserUpdated.subscribe(user => {
+      this.user = user;
+    });
+    console.log(this.user);
+  }
+
+  ngOnDestroy = () => {
+    this.userSub.unsubscribe();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }
